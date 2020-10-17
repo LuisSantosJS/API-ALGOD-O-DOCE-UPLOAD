@@ -20,6 +20,8 @@ app.use(express.json());
 
 app.use(cors());
 
+
+
 app.post('/upload/anexo', upload.single('anexo'), (req, res) => {
     res.json({ message: 'success', res: 'https://api-upload-algo-doce.herokuapp.com/uploads/' + req.file.fieldname + '-' + req.file.originalname + '' })
 })
